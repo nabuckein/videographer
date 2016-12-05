@@ -1,0 +1,140 @@
+body {
+  font-family: 'Ranga';
+  background-color: #bb1000;
+  color: white; }
+
+.container {
+  width: 100%; }
+
+.row {
+  margin: 0; }
+
+h1 {
+  font-family: 'Lobster';
+  font-size: 70px;
+  vertical-align: middle;
+  background-color: white;
+  color: #bb1000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.containerUnderSecondaryTitle {
+  width: 100%;
+  margin: 0; }
+
+.iconsLeft, .picsDiv, .iconsRight {
+  display: inline-block; }
+
+.iconVideo {
+  margin-top: 36px; }
+
+.glyphicon {
+  font-size: 80px; }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .glyphicon-tablet-portrait {
+    font-size: 60px; } }
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .glyphicon-phone-only {
+    font-size: 20px; } }
+@media (max-width: 400px) {
+  .glyphicon-phone-only {
+    font-size: 20px; } }
+
+.mainContent {
+  margin-bottom: 400px; }
+
+#secondaryTitle {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 40px; }
+
+#pics {
+  border-radius: 10px; }
+
+p {
+  padding: 10px;
+  background: #aaa;
+  color: white; }
+
+@media (max-width: 400px) {
+  .phone-up {
+    background: green; } }
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .phone-only {
+    background: yellow; } }
+
+@media (max-width: 400px) {
+  .mainTitle-phone-only-font {
+    font-size: 30px; } }
+@media (min-width: 400px) and (max-width: 599px) {
+  .mainTitle-phone-only-font {
+    font-size: 35px; } }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .tablet-portait-only {
+    background: green; } }
+
+@media (min-width: 600px) {
+  .tablet-portrait-up {
+    background: purple; } }
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .tablet-landscape-only {
+    background: purple; } }
+
+@media (max-width: 400px) {
+  .secondaryTitle-phone-size {
+    font-size: 18px; } }
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .img-tablet-landscape-only {
+    max-width: 90%;
+    max-height: 400px; } }
+
+@media (min-width: 900px) {
+  .img-tablet-landscape-up {
+    max-width: 90%;
+    max-height: 400px; } }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .img-tablet-portrait-only {
+    max-width: 90%;
+    max-height: 300px; } }
+
+@media (min-width: 600px) {
+  .img-tablet-portrait-up {
+    max-width: 90%;
+    max-height: 300px; } }
+
+@media (max-width: 400px) {
+  .img-phone-up {
+    max-width: 90%;
+    max-height: 200px; } }
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .img-phone-only {
+    max-width: 90%;
+    max-height: 200px; } }
+
+@media (min-width: 900px) {
+  .tablet-landscape-up {
+    background: purple; } }
+
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .desktop-only {
+    background: purple; } }
+
+@media (min-width: 1200px) {
+  .desktop-up {
+    background: purple; } }
+
+@media (min-width: 1800px) {
+  .big-desktop-up {
+    background: purple; } }
+
+/*# sourceMappingURL=index.css.map */
