@@ -55,7 +55,7 @@ p {
 }
 video{
   width:100%;
-  height:auto;
+  height:100%;
   position: fixed;
   z-index: -99;
   left:0;
@@ -167,6 +167,11 @@ div.row footer{
 		font-size: 18px;
 	}	
 }
+.for-phone-only-dynamic-title{
+  @include for-phone-only{
+    font-size: 18px;
+  }
+}
 
 .img-tablet-landscape-only {
   @include for-tablet-landscape-only {
@@ -203,8 +208,23 @@ div.row footer{
 .img-phone-only {
 	@include for-phone-only{
 		max-width:90% ;
-    	max-height:200px;
+    max-height:200px;
 	}
+}
+.dynamic-title-text-sizes{
+  @include for-phone-only{
+    font-size: 18px;
+  }@include for-phone-up{
+    font-size: 18px;
+  }@include for-tablet-portrait-up{
+    font-size:20px;
+  }@include for-tablet-portrait-only{
+    font-size:20px;
+  }@include for-tablet-landscape-up{
+    font-size:24px;
+  }@include for-tablet-landscape-only{
+    font-size:24px;
+  }
 }
 .tablet-landscape-up {
   @include for-tablet-landscape-up {

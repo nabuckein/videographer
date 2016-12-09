@@ -20,7 +20,7 @@ p {
 
 video {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: fixed;
   z-index: -99;
   left: 0; }
@@ -105,6 +105,10 @@ div.row footer {
   .secondaryTitle-phone-size {
     font-size: 18px; } }
 
+@media (min-width: 400px) and (max-width: 599px) {
+  .for-phone-only-dynamic-title {
+    font-size: 18px; } }
+
 @media (min-width: 900px) and (max-width: 1199px) {
   .img-tablet-landscape-only {
     max-width: 90%;
@@ -134,6 +138,25 @@ div.row footer {
   .img-phone-only {
     max-width: 90%;
     max-height: 200px; } }
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .dynamic-title-text-sizes {
+    font-size: 18px; } }
+@media (max-width: 400px) {
+  .dynamic-title-text-sizes {
+    font-size: 18px; } }
+@media (min-width: 600px) {
+  .dynamic-title-text-sizes {
+    font-size: 20px; } }
+@media (min-width: 600px) and (max-width: 899px) {
+  .dynamic-title-text-sizes {
+    font-size: 20px; } }
+@media (min-width: 900px) {
+  .dynamic-title-text-sizes {
+    font-size: 24px; } }
+@media (min-width: 900px) and (max-width: 1199px) {
+  .dynamic-title-text-sizes {
+    font-size: 24px; } }
 
 @media (min-width: 900px) {
   .tablet-landscape-up {
