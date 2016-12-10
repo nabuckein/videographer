@@ -4,7 +4,7 @@ $(document).ready(function(){
 // -- INITIALIZE VARIABLES AND CONTENT -- ////////////////////////////////////////////////////
 
 hideDynamicContent();
-$('.welcomeDiv').show(100);
+$('.welcomeDiv').show(50);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -33,5 +33,5 @@ $('.iconVideo').click(function(){
 // -- FUNCTION DEFINITIONS -- ///////////////////////////////////////////////////////////
 
 function hideDynamicContent(){
-	$('.dynamicContent').hide(100);
+	$('.dynamicContent').hide(50);
 }

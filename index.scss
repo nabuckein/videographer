@@ -31,6 +31,15 @@ $mainBackgroundColor: white;
   @media (min-width: 1800px) { @content; }
 }
 
+@keyframes divDisappear {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+/* The element to apply the animation to */
+
+    
+
 
 body{
 	font-family: 'Ranga';
