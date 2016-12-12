@@ -35,10 +35,25 @@ $mainBackgroundColor: white;
     from {opacity: 1.0;}
     to {opacity: 0.0;}
 }
+@keyframes divAppear {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
+}
 
 /* The element to apply the animation to */
 
-    
+.divDisappear{
+  animation-name:divDisappear;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+}   
+.divAppear{
+  animation-name:divAppear;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+}   
 
 
 body{
@@ -64,38 +79,60 @@ p {
 }
 video{
   width:100%;
-  height:100%;
+  
   position: fixed;
   z-index: -99;
   left:0;
   
 }
 div.row footer{
-  position:absolute;
-  bottom:0;
+  bottom:10px;
   background-color: white;
   color:red;
+  position: relative;
 }
 
 .container{
 	width:100%;
-  
+  margin-bottom: 20%;
 }
 .row{
 	margin:0;
 }
 
 .containerUnderSecondaryTitle{
-	width:100%;
+  height:100%;
 	margin:0;
 }
-.iconsLeft, .picsDiv, .iconsRight{
+.iconsLeft, .containerUnderSecondaryTitle, .iconsRight{
 	display:inline-block;
 }
 
 
 .iconVideo{
 	margin-top:10%;
+
+}
+#Videos{
+   
+   position: absolute;
+}
+#Calendar{
+   
+   position: absolute;
+
+}
+#Pictures{
+   
+   position: absolute;
+   width:100%;
+}
+#Contact{
+  
+   position: absolute;
+}
+#Welcome{
+   position: absolute;
 }
 
 .iconsLowerRow{
@@ -262,3 +299,4 @@ div.row footer{
 
     }
 }
+
