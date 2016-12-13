@@ -4,8 +4,12 @@ $(document).ready(function(){
 // -- INITIALIZE VARIABLES AND CONTENT -- ////////////////////////////////////////////////////
 
 //hideDynamicContent();
-$('.welcomeDiv').show(50);
-
+//$('.welcomeDiv').show(50);
+dynamicContentDivsArray = ["#Welcome", "#Videos", "#Calendar", "#Pictures", "#Contact"];
+for (var i=1; i<=dynamicContentDivsArray.length-1; i++){
+	var div = dynamicContentDivsArray[i];
+	$(div).addClass("divDisappear");
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +46,7 @@ function hideDynamicContent(){
 }
 var firsPass = 0;
 function dynamicDivSelect(div){
-	var dynamicContentDivsArray = ["#Welcome", "#Videos", "#Calendar", "#Pictures", "#Contact"];
+	//var dynamicContentDivsArray = ["#Welcome", "#Videos", "#Calendar", "#Pictures", "#Contact"];
 	
 	for (var n=0; n<=dynamicContentDivsArray.length-1; n++){
 		if(dynamicContentDivsArray[n] !== div){
