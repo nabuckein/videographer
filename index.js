@@ -52,12 +52,14 @@ function dynamicDivSelect(div){
 		if(dynamicContentDivsArray[n] !== div){
 			var hiddenDiv = dynamicContentDivsArray[n];			
 			//console.log(hiddenDiv);
+
 			$(hiddenDiv).addClass("divDisappear");
 			$(hiddenDiv).removeClass("divAppear");
 		}else if(dynamicContentDivsArray[n] === div){
 			 
 			var shownDiv = dynamicContentDivsArray[n];
 			console.log(shownDiv);
+			$(shownDiv).css("z-index","-1");
 			$(shownDiv).removeClass("divDisappear");
 			$(shownDiv).addClass("divAppear");
 			
