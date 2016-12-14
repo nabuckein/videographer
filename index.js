@@ -62,6 +62,11 @@ function dynamicDivSelect(div){
 			$(shownDiv).css("z-index","-1");
 			$(shownDiv).removeClass("divDisappear");
 			$(shownDiv).addClass("divAppear");
+			if(shownDiv === "#Pictures"){
+				$("video").css({"opacity":"0.2","background-color":"black"});
+			}else{
+				$("video").css("opacity","1.0");
+			}
 			
 		}
 	}

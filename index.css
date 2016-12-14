@@ -76,6 +76,9 @@ div.row footer {
   z-index: -100;
   position: absolute; }
 
+.videosDescription {
+  font-size: 24px; }
+
 #Calendar {
   z-index: -100;
   position: absolute; }
@@ -84,6 +87,9 @@ div.row footer {
   z-index: -100;
   position: absolute;
   width: 100%; }
+
+.carousel-inner {
+  border-radius: 40px; }
 
 #Contact {
   z-index: -100;
