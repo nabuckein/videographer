@@ -76,9 +76,6 @@ div.row footer {
   z-index: -100;
   position: absolute; }
 
-.videosDescription {
-  font-size: 24px; }
-
 #Calendar {
   z-index: -100;
   position: absolute; }
@@ -129,8 +126,8 @@ div.row footer {
   margin-bottom: 1%; }
 
 #secondaryTitle {
-  margin-top: 1%;
-  font-size: 24px; }
+  margin-top: 3%;
+  font-size: 26px; }
 
 #pics {
   border-radius: 10px; }
@@ -200,23 +197,47 @@ div.row footer {
     max-width: 90%;
     max-height: 200px; } }
 
+.dynamic-title-text-sizes {
+  margin-top: 10%; }
+  @media (min-width: 400px) and (max-width: 599px) {
+    .dynamic-title-text-sizes {
+      font-size: 20px; } }
+  @media (max-width: 400px) {
+    .dynamic-title-text-sizes {
+      font-size: 20px; } }
+  @media (min-width: 600px) {
+    .dynamic-title-text-sizes {
+      font-size: 22px; } }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .dynamic-title-text-sizes {
+      font-size: 22px; } }
+  @media (min-width: 900px) {
+    .dynamic-title-text-sizes {
+      font-size: 26px; } }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .dynamic-title-text-sizes {
+      font-size: 26px; } }
+
+.dynamic-content-paragraphs {
+  margin-top: 20%; }
+
 @media (min-width: 400px) and (max-width: 599px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 18px; } }
 @media (max-width: 400px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 18px; } }
 @media (min-width: 600px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 20px; } }
 @media (min-width: 600px) and (max-width: 899px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 20px; } }
 @media (min-width: 900px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 24px; } }
 @media (min-width: 900px) and (max-width: 1199px) {
-  .dynamic-title-text-sizes {
+  .dynamic-content-text-sizes {
     font-size: 24px; } }
 
 @media (min-width: 900px) {

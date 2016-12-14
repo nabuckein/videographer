@@ -117,9 +117,7 @@ div.row footer{
    z-index: -100;
    position: absolute;
 }
-.videosDescription{
-  font-size: 24px;
-}
+
 #Calendar{
    z-index: -100;
    position: absolute;
@@ -176,8 +174,8 @@ div.row footer{
 	margin-bottom:1%;
 }
 #secondaryTitle{	
-  margin-top:1%;
-	font-size: 24px;
+  margin-top:3%;
+	font-size: 26px;
 }
 #pics{
 	border-radius: 10px;
@@ -274,6 +272,26 @@ div.row footer{
 	}
 }
 .dynamic-title-text-sizes{
+  margin-top: 10%;
+  @include for-phone-only{
+    font-size: 20px;
+  }@include for-phone-up{
+    font-size: 20px;
+  }@include for-tablet-portrait-up{
+    font-size:22px;
+  }@include for-tablet-portrait-only{
+    font-size:22px;
+  }@include for-tablet-landscape-up{
+    font-size:26px;
+  }@include for-tablet-landscape-only{
+    font-size:26px;
+  }
+}
+.dynamic-content-paragraphs{
+  margin-top: 20%;
+}
+.dynamic-content-text-sizes{
+
   @include for-phone-only{
     font-size: 18px;
   }@include for-phone-up{

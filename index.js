@@ -1,40 +1,92 @@
 $(document).ready(function(){
 	console.log("Document READY!");
 
+	videosId = [];
 // -- INITIALIZE VARIABLES AND CONTENT -- ////////////////////////////////////////////////////
 
 //hideDynamicContent();
 //$('.welcomeDiv').show(50);
-dynamicContentDivsArray = ["#Welcome", "#Videos", "#Calendar", "#Pictures", "#Contact"];
-for (var i=1; i<=dynamicContentDivsArray.length-1; i++){
-	var div = dynamicContentDivsArray[i];
-	$(div).addClass("divDisappear");
-}
+	dynamicContentDivsArray = ["#Welcome", "#Videos", "#Calendar", "#Pictures", "#Contact"];
+	for (var i=1; i<=dynamicContentDivsArray.length-1; i++){
+		var div = dynamicContentDivsArray[i];
+		$(div).addClass("divDisappear");
+	}
 
 
-///////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////
 
-// -- LOGIC TO SWITCH DYNAMIC CONTENT -- /////////////////////////////////////////////////////
+	// -- LOGIC TO SWITCH DYNAMIC CONTENT -- /////////////////////////////////////////////////////
 
-$('.iconVideo').click(function(){
+	$('.iconVideo').click(function(){
+		
+		var icon = this.id.replace("Icon","");
+		//document.getElementById('secondaryTitle').innerHTML = icon;
+		icon = "#" + icon;
+		//hideDynamicContent();
+
+		//$(icon).show(100);
+		
+		dynamicDivSelect(icon);
+
+
+
+		if(icon === "#Videos"){
+
+			
+
+			$.ajax({ //request to wiki API
+
+		      url: 'https://api.dailymotion.com/user/hd_sz/videos',
+		      
+		      success: function(x) {
+
+		        var elementClassNames = document.getElementsByClassName("dynamic-content-paragraphs");
+
+		        for (var n=0; n<=x.list.length-1; n++){
+		        	
+		        	videosId.push(x.list[n].id);
+		        	var newPElement = document.createElement('p');
+		        	newPElement.className = "dynamic-content-text-sizes";
+		        	var newPElementTitle = document.createTextNode(x.list[n].title);
+		        	if(x.list[n].title !== undefined){
+		        		newPElement.appendChild(newPElementTitle);
+		        		elementClassNames[0].appendChild(newPElement);
+		        	}
+		        	
+		        }
+		        
+		      }
+
+		    });
+
+
+		}
+		
+
+		
+	});
+
+
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// -- LOGIC LOAD VIDEOS -- ///////////////////////////////////////////////////////////////
 	
-	var icon = this.id.replace("Icon","");
-	document.getElementById('secondaryTitle').innerHTML = icon;
-	icon = "#" + icon;
-	//hideDynamicContent();
 
-	//$(icon).show(100);
-	
-	dynamicDivSelect(icon);
-	console.log(icon + "CLICKED")
+		
+	$(".dynamic-content-text-sizes").click(function(){
+			console.log("Video title clicked!!");
+			$.ajax({ //request to wiki API
 
+			      url: 'https://api.dailymotion.com/user/hd_sz/videos' + videosId[0],
+			      
+			      success: function(x) {
 
-	
-});
+			        		        
+			        console.log(x);
+			      }
 
+			    });
 
-//////////////////////////////////////////////////////////////////////////////////////////
-
+		});
 
 });
 
