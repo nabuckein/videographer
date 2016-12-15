@@ -46,18 +46,26 @@ $(document).ready(function(){
 		        	
 		        	videosId.push(x.list[n].id);
 		        	var newPElement = document.createElement('p');
-		        	newPElement.className = "dynamic-content-text-sizes";
+		        	newPElement.id = "videoTitle" + n;	
+		        	
+		        	newPElement.className = "dynamic-paragraphs-text-sizes";
 		        	var newPElementTitle = document.createTextNode(x.list[n].title);
 		        	if(x.list[n].title !== undefined){
 		        		newPElement.appendChild(newPElementTitle);
 		        		elementClassNames[0].appendChild(newPElement);
 		        	}
+		        	//var newAppendedElement = document.getElementById(newPElement.id);
+		        	//newAppendedElement.addEventListener("click",elementClicked(),false);
 		        	
 		        }
 		        
 		      }
 
+		    }).done(function(){
+		    	//document.querySelectorAll('.dynamic-paragraphs-text-sizes')
+		    	//makeVideosLoadedAvailable();
 		    });
+
 
 
 		}
@@ -70,10 +78,28 @@ $(document).ready(function(){
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// -- LOGIC LOAD VIDEOS -- ///////////////////////////////////////////////////////////////
 	
+	$('.dynamic-content-paragraphs').on("click","p",function(event){
 
+		var videoClicked = this.id.replace("videoTitle","");
+		console.log(videosId[videoClicked]);	
+
+		$.ajax({
+			url: 'https://api.dailymotion.com/video/' + videosId[videoClicked] + "?fields=url" ,
+			success: function(y){
+				console.log(y);
+			}
+		});
+
+	});
 		
-	$(".dynamic-content-text-sizes").click(function(){
+	
+
+});
+
+function makeVideosLoadedAvailable(){
+	$('.dynamic-paragraphs-text-sizes').click(function(){
 			console.log("Video title clicked!!");
+			/*
 			$.ajax({ //request to wiki API
 
 			      url: 'https://api.dailymotion.com/user/hd_sz/videos' + videosId[0],
@@ -85,11 +111,10 @@ $(document).ready(function(){
 			      }
 
 			    });
+			    */	
 
 		});
-
-});
-
+}
 
 // -- FUNCTION DEFINITIONS -- ///////////////////////////////////////////////////////////
 
@@ -111,7 +136,7 @@ function dynamicDivSelect(div){
 			 
 			var shownDiv = dynamicContentDivsArray[n];
 			console.log(shownDiv);
-			$(shownDiv).css("z-index","-1");
+			$(shownDiv).css("z-index","99");
 			$(shownDiv).removeClass("divDisappear");
 			$(shownDiv).addClass("divAppear");
 			if(shownDiv === "#Pictures"){
