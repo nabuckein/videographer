@@ -8,7 +8,6 @@ $mainBackgroundColor: white;
 @mixin for-phone-only {
   @media (min-width:400px) and (max-width: 599px) { @content; }
 }
-
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) { @content; }
 }
@@ -54,12 +53,15 @@ $mainBackgroundColor: white;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }   
-
+html{
+  height: auto;
+}
 
 body{
 	font-family: 'Ranga';
 	background-color: $mainTitleColor;
 	color: white;
+  height: 100%;
  
 }
 h1{
@@ -85,16 +87,19 @@ video{
   left:0;
   
 }
-div.row footer{
-  bottom:10px;
+#footer{  
   background-color: white;
   color:red;
   position: relative;
+  bottom: 1px;
+  padding: 1%; 
 }
 
 .container{
 	width:100%;
-  margin-bottom: 20%;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .row{
 	margin:0;
@@ -116,6 +121,7 @@ div.row footer{
 #Videos{
    z-index: -100;
    position: absolute;
+   
 }
 
 #Calendar{
@@ -150,7 +156,7 @@ div.row footer{
   
 }
 .iconsLowerRow{
-  margin-top: 10%;
+  margin-top: 20%;
 }
 .glyphicon{
 	font-size:80px;
@@ -172,6 +178,9 @@ div.row footer{
 .mainContent{
   
 	margin-bottom:1%;
+}
+.dynamicContent{
+
 }
 #secondaryTitle{	
   margin-top:3%;
@@ -272,7 +281,7 @@ div.row footer{
 	}
 }
 .dynamic-title-text-sizes{
-  margin-top: 10%;
+  margin-top: 6%;
   @include for-phone-only{
     font-size: 20px;
   }@include for-phone-up{
@@ -288,10 +297,12 @@ div.row footer{
   }
 }
 .dynamic-content-paragraphs{
-  margin-top: 20%;
+  margin-top: 15%;
+  height: 200px;
+  overflow: auto;
 }
-.dynamic-paragraphs-text-sizes{
-
+.contact-paragragraphs,.dynamic-paragraphs-text-sizes{
+  margin-top: 1%;
   @include for-phone-only{
     font-size: 18px;
   }@include for-phone-up{
@@ -301,10 +312,14 @@ div.row footer{
   }@include for-tablet-portrait-only{
     font-size:20px;
   }@include for-tablet-landscape-up{
-    font-size:24px;
+    font-size:22px;
   }@include for-tablet-landscape-only{
-    font-size:24px;
+    font-size:22px;
   }
+}
+.dynamic-paragraphs-text-sizes{
+  cursor: grab;
+  
 }
 .tablet-landscape-up {
   @include for-tablet-landscape-up {

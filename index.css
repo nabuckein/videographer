@@ -23,10 +23,14 @@
   /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards; }
 
+html {
+  height: auto; }
+
 body {
   font-family: 'Ranga';
   background-color: #bb1000;
-  color: white; }
+  color: white;
+  height: 100%; }
 
 h1 {
   font-family: 'Lobster';
@@ -49,15 +53,18 @@ video {
   z-index: -99;
   left: 0; }
 
-div.row footer {
-  bottom: 10px;
+#footer {
   background-color: white;
   color: red;
-  position: relative; }
+  position: relative;
+  bottom: 1px;
+  padding: 1%; }
 
 .container {
   width: 100%;
-  margin-bottom: 20%; }
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 5%; }
 
 .row {
   margin: 0; }
@@ -106,7 +113,7 @@ div.row footer {
   border-width: 2px; }
 
 .iconsLowerRow {
-  margin-top: 10%; }
+  margin-top: 20%; }
 
 .glyphicon {
   font-size: 80px; }
@@ -198,7 +205,7 @@ div.row footer {
     max-height: 200px; } }
 
 .dynamic-title-text-sizes {
-  margin-top: 10%; }
+  margin-top: 6%; }
   @media (min-width: 400px) and (max-width: 599px) {
     .dynamic-title-text-sizes {
       font-size: 20px; } }
@@ -219,26 +226,33 @@ div.row footer {
       font-size: 26px; } }
 
 .dynamic-content-paragraphs {
-  margin-top: 20%; }
+  margin-top: 15%;
+  height: 200px;
+  overflow: auto; }
 
-@media (min-width: 400px) and (max-width: 599px) {
-  .dynamic-content-text-sizes {
-    font-size: 18px; } }
-@media (max-width: 400px) {
-  .dynamic-content-text-sizes {
-    font-size: 18px; } }
-@media (min-width: 600px) {
-  .dynamic-content-text-sizes {
-    font-size: 20px; } }
-@media (min-width: 600px) and (max-width: 899px) {
-  .dynamic-content-text-sizes {
-    font-size: 20px; } }
-@media (min-width: 900px) {
-  .dynamic-content-text-sizes {
-    font-size: 24px; } }
-@media (min-width: 900px) and (max-width: 1199px) {
-  .dynamic-content-text-sizes {
-    font-size: 24px; } }
+.contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+  margin-top: 1%; }
+  @media (min-width: 400px) and (max-width: 599px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 18px; } }
+  @media (max-width: 400px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 18px; } }
+  @media (min-width: 600px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 20px; } }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 20px; } }
+  @media (min-width: 900px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 22px; } }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .contact-paragragraphs, .dynamic-paragraphs-text-sizes {
+      font-size: 22px; } }
+
+.dynamic-paragraphs-text-sizes {
+  cursor: grab; }
 
 @media (min-width: 900px) {
   .tablet-landscape-up {

@@ -2,6 +2,7 @@ $(document).ready(function(){
 	console.log("Document READY!");
 
 	videosId = [];
+	videosIconAlreadyClicked = false;
 // -- INITIALIZE VARIABLES AND CONTENT -- ////////////////////////////////////////////////////
 
 //hideDynamicContent();
@@ -30,7 +31,7 @@ $(document).ready(function(){
 
 
 
-		if(icon === "#Videos"){
+		if(icon === "#Videos" && videosIconAlreadyClicked === false){
 
 			
 
@@ -54,16 +55,15 @@ $(document).ready(function(){
 		        		newPElement.appendChild(newPElementTitle);
 		        		elementClassNames[0].appendChild(newPElement);
 		        	}
-		        	//var newAppendedElement = document.getElementById(newPElement.id);
-		        	//newAppendedElement.addEventListener("click",elementClicked(),false);
+		        	
 		        	
 		        }
 		        
 		      }
 
 		    }).done(function(){
-		    	//document.querySelectorAll('.dynamic-paragraphs-text-sizes')
-		    	//makeVideosLoadedAvailable();
+		    	
+		    	videosIconAlreadyClicked = true;
 		    });
 
 
@@ -79,17 +79,20 @@ $(document).ready(function(){
 	// -- LOGIC LOAD VIDEOS -- ///////////////////////////////////////////////////////////////
 	
 	$('.dynamic-content-paragraphs').on("click","p",function(event){
-
-		var videoClicked = this.id.replace("videoTitle","");
-		console.log(videosId[videoClicked]);	
-
-		$.ajax({
-			url: 'https://api.dailymotion.com/video/' + videosId[videoClicked] + "?fields=url" ,
-			success: function(y){
-				console.log(y);
-			}
-		});
-
+		var id = this.id;
+		var idIncludes = id.substr(0,10);
+		//console.log(idIncludes);
+		if(idIncludes === "videoTitle"){
+			var videoClicked = this.id.replace("videoTitle",""); //get position of video title clicked by replacing the first part of the ID
+			console.log(videosId[videoClicked]);	
+			
+			$.ajax({
+				url: 'https://api.dailymotion.com/video/' + videosId[videoClicked] + "?fields=url" ,
+				success: function(y){
+					window.open(y.url,"","width=800,height=460,menubar=no,titlebar=no,status=no,scrollbar=no");
+				}
+			});
+		}
 	});
 		
 	
