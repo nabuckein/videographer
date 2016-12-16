@@ -1,6 +1,16 @@
 $(document).ready(function(){
-	console.log("Document READY!");
+	
+	var mainContainer = document.getElementById('mainContainer');
+	//mainContainer.height = 700;
+	var mainContainerHeight = $("#mainContainer").height(400);
+	var footerHeight = $(".footer").height();
+	mainContainerHeight.height(mainContainerHeight-footerHeight);
+	window.onresize = function(){
 
+		mainContainerHeight.height(mainContainerHeight-footerHeight);
+	}
+
+	console.log(footerHeight);
 	videosId = [];
 	videosIconAlreadyClicked = false;
 // -- INITIALIZE VARIABLES AND CONTENT -- ////////////////////////////////////////////////////
